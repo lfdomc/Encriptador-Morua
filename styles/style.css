@@ -82,6 +82,7 @@ body{
     
 }
 
+
 .presentacion__icono{
     width: 4%;
     height: 4%;
@@ -255,9 +256,14 @@ body{
 
 @media (max-width:1200px){
 
+.header__logo{
+
+    padding: 0%;
+}
+
 .presentacion{
     flex-direction: column;
-    padding: 10%;
+    padding: 2%;
     width: auto;
     gap: 1rem;
 }
@@ -302,8 +308,10 @@ display: none;
 }
 
 .presentacion__enlaces{
+    display: flex;
     height: auto;
     max-width: 100%;
+    gap: 0.51%
 
 }
 .presentacion__contenido__input{
@@ -354,6 +362,10 @@ display: none;
         
     }
 
+    .presentacion{
+        padding: 2%;
+    
+    }
     .presentacion__enlaces__link2{
         font-size: 6vw;
         
@@ -361,4 +373,11 @@ display: none;
 
     }
 
+    .presentacion__enlaces{
+        display: flex;
+        height: auto;
+        max-width: 100%;
+        gap: 0.51%
+    
+    }
 }
