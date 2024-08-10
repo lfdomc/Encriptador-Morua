@@ -60,7 +60,7 @@ body{
     text-align:left;
     border: 2px solid var(--color-primario);
     width: 100%;
-    margin-bottom: 72px;
+    margin-bottom: 4.5rem;
     font-weight: 700;
     outline: none; /* Quita el borde de enfoque */
     border: 0px solid #ccc; /* Opcional: agrega un borde estándar */
@@ -257,8 +257,9 @@ body{
 
 .presentacion{
     flex-direction: column;
-    padding: 5%;
+    padding: 10%;
     width: auto;
+    gap: 1rem;
 }
 
 .presentacion__icono{
@@ -306,12 +307,14 @@ display: none;
 
 }
 .presentacion__contenido__input{
-    margin-top:0.625rem;
-    margin-bottom: 0.625rem;
-    padding: 2%;
-    min-height: auto;
-    min-width: auto;
-    width: 100%;
+    
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  margin-bottom: 1%;
+  
+      
+    
 
 }
 
@@ -347,10 +350,14 @@ display: none;
     .presentacion__enlaces__link1{
         font-size: 6vw;
         
+        margin: 2%;
+        
     }
 
     .presentacion__enlaces__link2{
         font-size: 6vw;
+        
+        margin: 2%;
 
     }
 
