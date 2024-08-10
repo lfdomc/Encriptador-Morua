@@ -34,7 +34,7 @@ body{
 .presentacion{
     display: flex;
     justify-content:space-around;
-    gap: 5rem;
+    gap: 4rem;
     padding: 3rem;
     
    
@@ -309,9 +309,10 @@ display: none;
 
 .presentacion__enlaces{
     display: flex;
+    
     height: auto;
-    max-width: 100%;
-    gap: 0.51%
+    width: 100%;
+    gap: var(--24-pixeles)
 
 }
 .presentacion__contenido__input{
@@ -356,28 +357,25 @@ display: none;
 @media (max-width:370px){
 
     .presentacion__enlaces__link1{
-        font-size: 6vw;
-        
-        margin: 2%;
+        width: 100%;
         
     }
 
     .presentacion{
-        padding: 2%;
+        flex-direction: column;
     
     }
     .presentacion__enlaces__link2{
-        font-size: 6vw;
-        
-        margin: 2%;
+        width: 100%;
 
     }
 
     .presentacion__enlaces{
         display: flex;
+        flex-direction: column;
         height: auto;
-        max-width: 100%;
-        gap: 0.51%
+        width: 100%;
+        gap: var(--24-pixeles)
     
     }
 }
