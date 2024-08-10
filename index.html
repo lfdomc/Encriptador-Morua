@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emcriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main class="presentacion">
+
+        <section>
+            <nav class="header__logo">
+            <img class="presentacion__imagen" src="./assets/Logo.png" alt="Logo">
+            </nav>
+        </section>
+
+        <section class ="text__area">
+
+            <textarea  id= "textarea" placeholder ="Ingrese el texto aqui" class="presentacion__contenido__input"></textarea>
+            <div class="subtexto">
+                <img class="presentacion__icono" src="./assets/Group.png" alt="Logo">
+                <h3 class="presentacion__enlaces__subtitulo">Solo letras minúsculas y sin acento</h3>
+            </div>
+            
+
+        <div class="presentacion__enlaces">
+            
+            <button onclick="Encriptar()"  class="presentacion__enlaces__link1"  >Encriptar</button>
+            <button onclick="Desencriptar()" class="presentacion__enlaces__link2">Desencriptar  </button>
+             
+        </div>   
+
+        </section>
+
+        <section  class = "cuadro">
+            <h4 id ="respuesta" > </h4>
+            <img  class="espacio" id="imagenMuneco" src="./assets/muneco.png" alt="Muñeco">
+            <h2  id="cuadro" class="cuadro__derecha" >
+                Ningún mensaje fue <br> encontrado
+            </h2>
+
+            <p class="cuadro__derecha">
+                Ingresa el texto que desees encriptar o desencriptar.
+            </p>
+            <div class="respuesta">
+        
+                <button  id = "bCopiar" onclick="copiarTexto()"  class="invisible"  >Copiar</button>
+            
+                 
+            </div> 
+            
+        </section>
+
+    </main>
+
+        <script src="app.js" defer></script>
+        <footer>
+            <p class="footer">
+                Desarrollado por Luis Morua
+            </p>
+</body>
+</html>
