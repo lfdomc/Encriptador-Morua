@@ -338,4 +338,20 @@ display: none;
 
 
 
+
+
+}
+
+@media (max-width:370px){
+
+    .presentacion__enlaces__link1{
+        font-size: 6vw;
+        
+    }
+
+    .presentacion__enlaces__link2{
+        font-size: 6vw;
+
+    }
+
 }
