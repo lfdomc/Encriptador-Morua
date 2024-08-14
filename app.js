@@ -58,7 +58,7 @@ let analizarTextoE = (texto)=>{
             //encripta el texto mediante la funcion encriptar y lo asigna al elemento h4
             asignarTextoElemento("h4",encriptar(texto)) :
             // manda una alerta informando que el texto a encriptar no posee las características mínimas
-            alert('El Texto contiene valores no aceptados para encriptar /br Recuerda:')
+            alert('El Texto contiene valores no aceptados')
 }
 
 let analizarTextoD = (texto)=>{ 
