@@ -2,12 +2,16 @@
 
 //Formulas de Manejo de texto
 
+//Formula de filtrar texto
+
 
 //Formula que obtiene el texto de un elemento
 const obtenerTexto =(elemento)=>{
     var textarea = document.getElementById(elemento);
      texto = textarea.value;
 }
+
+
 //Formula que asigna el texto a un elemento
 let asignarTextoElemento= (elemento, texto)=>{
     let titulo =document.querySelector(elemento);
@@ -43,17 +47,38 @@ let agregarClase = (idCSS, clase)=>{
 //Formula que le quita una clase CSS a un elemento
 let quitarClase = (idCss, quitarClase)=>{
     document.getElementById(idCss).classList.remove(quitarClase);
-    
-
 }
+
+// Formula para analizar si el texto cumple los requisitos para encriptar
+const regex = /^[a-z\s]+$/;
+
+let analizarTextoE = (texto)=>{ 
+            // revisa que el texto sea en minuscula y no tenga caracteres especiales
+    texto ===texto.toLowerCase() && regex.test(texto) ? 
+            //encripta el texto mediante la funcion encriptar y lo asigna al elemento h4
+            asignarTextoElemento("h4",encriptar(texto)) :
+            // manda una alerta informando que el texto a encriptar no posee las características mínimas
+            alert('El Texto contiene valores no aceptados para encriptar /br Recuerda:')
+}
+
+let analizarTextoD = (texto)=>{ 
+    // revisa que el texto sea en minuscula y no tenga caracteres especiales
+texto ===texto.toLowerCase() && regex.test(texto) ? 
+    //encripta el texto mediante la funcion encriptar y lo asigna al elemento h4
+    asignarTextoElemento("h4",desencriptar(texto)) :
+    // manda una alerta informando que el texto a encriptar no posee las características mínimas
+    alert('El Texto contiene valores no aceptados');
+}
+
+
 
 //Función que se realiza cuando se da el click en el boton encriptar
 function Encriptar(){
 
     //obtiene el texto a trabajar
     obtenerTexto("textarea");
-    //encripta el texto mediante la funcion encriptar y lo asigna al elemento h4
-    asignarTextoElemento("h4",encriptar(texto));
+    //llama a la funcion para analizar y encriptar
+    analizarTextoE(texto);
     //borra el elemento p
     asignarTextoElemento("p","");
     //borra el elemento h2
@@ -74,8 +99,8 @@ function Encriptar(){
 function Desencriptar(){
     //obtiene el texto a trabajar
     obtenerTexto("textarea");
-    //desencripta el texto mediante la funcion encriptar y lo asigna al elemento h4
-    let textorespuesta= asignarTextoElemento("h4",desencriptar(texto));
+    //llama a la funcion para analizar y desencriptar
+    analizarTextoD(texto);
     //borra el elemento p
     asignarTextoElemento("p","");
     //borra el elemento h2
